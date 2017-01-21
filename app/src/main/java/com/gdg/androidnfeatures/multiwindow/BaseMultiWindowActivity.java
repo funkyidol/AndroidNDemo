@@ -29,5 +29,14 @@ public class BaseMultiWindowActivity extends AppCompatActivity {
                 startActivity(new Intent(BaseMultiWindowActivity.this, SimpleActivity.class));
             }
         });
+
+        btNewTaskActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BaseMultiWindowActivity.this, NewTaskActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
     }
 }
