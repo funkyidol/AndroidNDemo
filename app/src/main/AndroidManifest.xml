@@ -25,6 +25,9 @@
             android:resizeableActivity="false"
             android:taskAffinity="">
         </activity>
+        <activity android:name=".multiwindow.AdjacentActivity"
+            android:taskAffinity="">
+        </activity>
     </application>
 
 </manifest>

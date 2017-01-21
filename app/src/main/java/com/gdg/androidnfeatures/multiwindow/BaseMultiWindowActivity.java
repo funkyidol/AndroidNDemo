@@ -38,5 +38,15 @@ public class BaseMultiWindowActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btAdjacentActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BaseMultiWindowActivity.this, AdjacentActivity.class);
+                intent.addFlags(
+                        Intent.FLAG_ACTIVITY_LAUNCH_ADJACENT | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
     }
 }

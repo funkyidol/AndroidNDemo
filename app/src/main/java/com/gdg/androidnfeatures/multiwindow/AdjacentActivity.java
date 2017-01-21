@@ -7,14 +7,14 @@ import android.util.Log;
 
 import com.gdg.androidnfeatures.R;
 
-public class SimpleActivity extends AppCompatActivity {
+public class AdjacentActivity extends AppCompatActivity {
 
-    private static final String TAG = "SimpleActivity";
+    private static final String TAG = "AdjacentActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_simple);
+        setContentView(R.layout.activity_adjacent);
     }
 
     @Override

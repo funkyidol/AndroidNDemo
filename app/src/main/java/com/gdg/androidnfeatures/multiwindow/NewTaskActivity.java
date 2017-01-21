@@ -38,6 +38,6 @@ public class NewTaskActivity extends AppCompatActivity {
     @Override
     public void onMultiWindowModeChanged(boolean isInMultiWindowMode) {
         super.onMultiWindowModeChanged(isInMultiWindowMode);
-        Log.d(TAG, "onMultiWindowModeChanged: " + (isInMultiWindowMode ? "true" : "false"));
+        Log.d(TAG, "onMultiWindowModeChanged: " + isInMultiWindowMode);
     }
 }
