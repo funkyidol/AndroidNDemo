@@ -41,6 +41,12 @@ public class BaseMultiWindowActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Start the activity in the new Task in order for the flag to take effect. Otherwise it
+         * will launch in the same window it was initiated from. This flag is just a hint to
+         * the system and does not guarantee that the activity will always start in the adjacent
+         * window.
+         */
         btAdjacentActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,6 +57,10 @@ public class BaseMultiWindowActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * This will launch a fullscreen activity. But the activity will not be able to hide
+         * status bar when in multi-window mode
+         */
         btFullscreenActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

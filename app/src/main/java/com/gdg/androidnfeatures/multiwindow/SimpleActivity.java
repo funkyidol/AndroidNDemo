@@ -17,6 +17,10 @@ public class SimpleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_simple);
     }
 
+    /**
+     * In Multi-window mode, activity will go in pause state once it looses focus even though it
+     * is visible.
+     */
     @Override
     protected void onPause() {
         Log.d(TAG, "OnPause");
@@ -35,6 +39,10 @@ public class SimpleActivity extends AppCompatActivity {
         Log.d(TAG, "onConfigurationChanged");
     }
 
+    /**
+     * You can get the status if the currently the activity is in multi-window mode or not.
+     * @param isInMultiWindowMode
+     */
     @Override
     public void onMultiWindowModeChanged(boolean isInMultiWindowMode) {
         super.onMultiWindowModeChanged(isInMultiWindowMode);
