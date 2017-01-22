@@ -13,6 +13,7 @@ public class BaseMultiWindowActivity extends AppCompatActivity {
     Button btNormalActivity;
     Button btNewTaskActivity;
     Button btAdjacentActivity;
+    Button btFullscreenActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class BaseMultiWindowActivity extends AppCompatActivity {
         btNormalActivity = (Button) findViewById(R.id.bt_normal_activity);
         btNewTaskActivity = (Button) findViewById(R.id.bt_new_task_activity);
         btAdjacentActivity = (Button) findViewById(R.id.bt_adjacent_activity);
+        btFullscreenActivity = (Button) findViewById(R.id.bt_fullscreen_activity);
 
         btNormalActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,14 @@ public class BaseMultiWindowActivity extends AppCompatActivity {
                 Intent intent = new Intent(BaseMultiWindowActivity.this, AdjacentActivity.class);
                 intent.addFlags(
                         Intent.FLAG_ACTIVITY_LAUNCH_ADJACENT | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        btFullscreenActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BaseMultiWindowActivity.this, FullScreenActivity.class);
                 startActivity(intent);
             }
         });

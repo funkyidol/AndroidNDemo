@@ -25,8 +25,13 @@
             android:resizeableActivity="false"
             android:taskAffinity="">
         </activity>
-        <activity android:name=".multiwindow.AdjacentActivity"
+        <activity
+            android:name=".multiwindow.AdjacentActivity"
             android:taskAffinity="">
+        </activity>
+        <activity
+            android:name=".multiwindow.FullScreenActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
     </application>
 
