@@ -33,6 +33,18 @@
             android:name=".multiwindow.FullScreenActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
+        <activity android:name=".quicksettings.QuickSettingActivity">
+        </activity>
+
+        <service
+            android:name=".quicksettings.CameraTileService"
+            android:icon="@drawable/ic_camera_alt_white_24dp"
+            android:label="AndroidN Demo"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
