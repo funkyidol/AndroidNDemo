@@ -9,7 +9,8 @@
         android:resizeableActivity="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -20,24 +21,30 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts"/>
         </activity>
-        <activity android:name=".multiwindow.SimpleActivity">
+        <activity
+            android:name=".multiwindow.SimpleActivity"
+            android:label="Simple Activity">
         </activity>
         <activity
             android:name=".multiwindow.BaseMultiWindowActivity"
             android:exported="true"
+            android:label="Multi-Window Activity"
             android:parentActivityName=".MainActivity">
         </activity>
         <activity
             android:name=".multiwindow.NewTaskActivity"
+            android:label="New Task Activity"
             android:resizeableActivity="false"
             android:taskAffinity="">
         </activity>
         <activity
             android:name=".multiwindow.AdjacentActivity"
+            android:label="Adjacent Activity"
             android:taskAffinity="">
         </activity>
         <activity
             android:name=".multiwindow.FullScreenActivity"
+            android:label="Full Screen Activity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
         <activity android:name=".quicksettings.QuickSettingActivity">
@@ -53,11 +60,14 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".appshortcuts.AppShortcutsActivity">
+        <activity
+            android:name=".appshortcuts.AppShortcutsActivity"
+            android:label="App Shortcuts Activity">
         </activity>
         <activity
             android:name=".appshortcuts.DynamicShortcutActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="DDynamic shortcut Activity">
             <intent-filter>
                 <action
                     android:name="com.gdg.androidnfeatures.OPEN_DYNAMIC_SHORTCUT"/>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidNFeatures</string>
+    <string name="app_name">Android N Features</string>
     <string name="short_label">Multi-Window Activity</string>
     <string name="long_label">Multi-Window Activity Demo</string>
 </resources>
