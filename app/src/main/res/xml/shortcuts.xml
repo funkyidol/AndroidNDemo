@@ -4,15 +4,9 @@
     <!--Static Shortcut -->
     <shortcut
         android:enabled="true"
-
         android:shortcutId="static"
         android:shortcutLongLabel="@string/long_label"
         android:shortcutShortLabel="@string/short_label">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.gdg.androidnfeatures.MainActivity"
-            android:targetPackage="com.gdg.androidnfeatures" />
-
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="com.gdg.androidnfeatures.multiwindow.BaseMultiWindowActivity"
