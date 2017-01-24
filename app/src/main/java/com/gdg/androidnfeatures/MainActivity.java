@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.gdg.androidnfeatures.appshortcuts.AppShortcutsActivity;
 import com.gdg.androidnfeatures.multiwindow.BaseMultiWindowActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, BaseMultiWindowActivity.class));
+            }
+        });
+
+        btAppShortcuts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AppShortcutsActivity.class));
             }
         });
     }

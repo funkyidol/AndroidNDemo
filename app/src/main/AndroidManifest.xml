@@ -15,10 +15,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
         </activity>
         <activity android:name=".multiwindow.SimpleActivity">
         </activity>
-        <activity android:name=".multiwindow.BaseMultiWindowActivity">
+        <activity
+            android:name=".multiwindow.BaseMultiWindowActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
         </activity>
         <activity
             android:name=".multiwindow.NewTaskActivity"
@@ -45,6 +52,18 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+
+        <activity android:name=".appshortcuts.AppShortcutsActivity">
+        </activity>
+        <activity
+            android:name=".appshortcuts.DynamicShortcutActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.gdg.androidnfeatures.OPEN_DYNAMIC_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
